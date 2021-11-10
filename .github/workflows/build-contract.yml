@@ -1,7 +1,7 @@
 name: Build Contract
 on: 
   push:
-    branches: [$default-branch]
+    branches: [main]
     paths:
       - "./contracts/**"
       # - "packages/hardhat-core/**"
