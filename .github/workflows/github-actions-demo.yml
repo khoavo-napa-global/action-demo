@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cd root
-        run: cd action-demo/action-demo
+        run: cd ..
       - name: Install
         run: yarn 
       # - name: Run Compile
