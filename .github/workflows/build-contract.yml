@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: yarn
-      - name: Install
-        run: yarn --frozen-lockfile
-      - name: Build
-        run: yarn build
+      # - name: Install
+      #   run: yarn --frozen-lockfile
+      # - name: Build
+      #   run: yarn build
       - name: Run tests
         run: yarn test
