@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Install
         run: yarn 
-      - name: Run Compile
-        run: npx hardhat compile
+      # - name: Run Compile
+      #   run: npx hardhat compile
       - name: Run tests
         run: yarn test
