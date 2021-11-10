@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Test Contract
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -9,7 +9,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
-      - name: Run install
+      - name: Install Package
         run: yarn
       - name: Run Compile
         run: npx hardhat compile
