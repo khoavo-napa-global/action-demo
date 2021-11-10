@@ -8,7 +8,7 @@ on:
       # - "packages/hardhat-common/**"
       # - "config/**"
 
- jobs:
+jobs:
   test_on_linux:
     name: Run E2E tests on Ubuntu with Node ${{ matrix.node }}
     runs-on: ubuntu-latest
