@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  Explore-GitHub-Actions:
+  Contract-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
           node-version: 12.x
       - name: Install Package
         run: yarn
-      - name: Run Compile
-        run: npx hardhat compile
+      # - name: Run Compile
+      #   run: npx hardhat compile
       - name: Run tests
         run: yarn test
