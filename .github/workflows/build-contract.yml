@@ -3,11 +3,11 @@ on: [push]
 jobs: 
   branches: [$default-branch]
   paths:
-      - "packages/e2e/**"
-      - "packages/hardhat-core/**"
-      - "packages/hardhat-common/**"
-      - "config/**"
-      
+      - "./contracts/**"
+      # - "packages/hardhat-core/**"
+      # - "packages/hardhat-common/**"
+      # - "config/**"
+
   jobs:
   test_on_linux:
     name: Run E2E tests on Ubuntu with Node ${{ matrix.node }}
