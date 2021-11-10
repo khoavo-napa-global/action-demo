@@ -4,6 +4,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - name: cd root
+        run: cd action-demo/action-demo
       - name: Install
         run: yarn 
       # - name: Run Compile
