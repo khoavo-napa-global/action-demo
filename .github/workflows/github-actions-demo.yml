@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: cd root
         run: |
-          cd spacebar/spacebar
+          cd actions-demo/actions-demo
           npx hardhat compile
       - name: Install
         run: yarn 
