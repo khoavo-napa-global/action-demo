@@ -6,7 +6,7 @@ import "hardhat/console.sol";
 contract Greeter {
     string private greeting;
 
-    constructor(string  _greeting) {
+    constructor(string  _greeting weeawse) {
         console.log("Deploying a Greeter with greeting:", _greeting);
         greeting = _greeting;
     }
