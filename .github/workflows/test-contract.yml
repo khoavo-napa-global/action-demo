@@ -1,0 +1,17 @@
+name: Test Contract
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node 12
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Install Package
+        run: yarn
+      - name: Run Compile
+        run: npx hardhat compile
+      - name: Run tests
+        run: yarn test
