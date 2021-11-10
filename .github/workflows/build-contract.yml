@@ -23,7 +23,7 @@ jobs:
           cache: yarn
       # - name: Install
       #   run: yarn --frozen-lockfile
-      # - name: Build
-      #   run: yarn build
+      - name: Compile
+        run: yarn compile
       - name: Run tests
         run: yarn test
