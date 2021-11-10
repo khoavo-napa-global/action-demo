@@ -9,7 +9,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
-      # - name: Run Compile
-      #   run: npx hardhat compile
+      - name: Run install
+        run: yarn
+      - name: Run Compile
+        run: npx hardhat compile
       - name: Run tests
         run: yarn test
