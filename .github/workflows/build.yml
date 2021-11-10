@@ -1,0 +1,29 @@
+name: Build
+on: 
+  push:
+    branches: [main]
+    paths:
+      - "./contracts/**"
+      # - "packages/hardhat-core/**"
+      # - "packages/hardhat-common/**"
+      # - "config/**"
+
+jobs:
+  test_on_linux:
+    name: Run E2E tests on Ubuntu with Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12, 14, 16]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+          cache: yarn
+      # - name: Install
+      #   run: yarn --frozen-lockfile
+      - name: Compile
+        run: yarn compile
+      - name: Run tests
+        run: yarn test
