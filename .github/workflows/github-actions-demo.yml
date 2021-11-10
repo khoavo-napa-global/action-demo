@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cd root
-        run: cd ..
+        run: |
+          cd spacebar/spacebar
+          npx hardhat compile
       - name: Install
         run: yarn 
       # - name: Run Compile
