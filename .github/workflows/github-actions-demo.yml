@@ -1,7 +1,6 @@
 name: Test Contract
 on: [
-  push:
-    branches: [$default-branch]
+  $pull_request_target
 ]
 jobs:
   Explore-GitHub-Actions:
