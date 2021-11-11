@@ -9,6 +9,7 @@ on:
 jobs:
   Contract-GitHub-Actions:
     runs-on: ubuntu-latest
+    continue-on-error: false
     steps:
       - uses: actions/checkout@v2
       - name: Setup node 12
