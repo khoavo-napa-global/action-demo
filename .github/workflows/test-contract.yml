@@ -9,9 +9,9 @@ on:
 jobs:
   Contract-GitHub-Actions:
     runs-on: ubuntu-latest
-    if: ${{ failure() }}
-    needs:
-      - Contract-GitHub-Actions-2
+    # if: ${{ failure() }}
+    # needs:
+    #   - Contract-GitHub-Actions-2
     steps:
       - uses: actions/checkout@v2
       - name: Setup node 12
