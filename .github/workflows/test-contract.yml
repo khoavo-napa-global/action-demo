@@ -20,6 +20,4 @@ jobs:
       # - name: Run Compile
       #   run: npx hardhat compile
       - name: Run solhint check
-        run: npx hardhat check
-        with:
-          fail-on-error: 'true'
+        run: npx solhint --max-warnings 0 -q true  contracts/**/*.sol
