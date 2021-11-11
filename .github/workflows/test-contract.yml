@@ -9,9 +9,6 @@ on:
 jobs:
   Contract-GitHub-Actions:
     runs-on: ubuntu-latest
-    # if: ${{ failure() }}
-    # needs:
-    #   - Contract-GitHub-Actions-2
     steps:
       - uses: actions/checkout@v2
       - name: Setup node 12
@@ -26,39 +23,11 @@ jobs:
                   repo: context.repo.repo,
                   run_id: context.runId
               })
-      # - name: Install Package
-      #   run: yarn
+      - name: Install Package
+        run: yarn
       # - name: Run Compile
       #   run: npx hardhat compile
       - name: Run solhint check
         run: yarn lint
       # - name: Run tests
         # run: yarn test
-  # Contract-GitHub-Actions-2:
-  #   runs-on: ubuntu-latest
-  #   if: ${{ failure() }}
-  #   needs:
-  #     - Contract-GitHub-Actions
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: vishnudxb/cancel-workflow@v1.2
-  #     - name: Setup node 12
-  #       uses: actions/setup-node@v2
-  #     - name: Cancel current workflow run
-  #       uses: actions/github-script@v4
-  #       with:
-  #         node-version: 12.x
-  #         script: |
-  #             github.actions.cancelWorkflowRun({
-  #                 owner: context.repo.owner,
-  #                 repo: context.repo.repo,
-  #                 run_id: context.runId
-  #             })
-  #     - name: Install Package
-  #       run: yarn
-      # - name: Run Compile
-      #   run: npx hardhat compile
-      # - name: Run solhint check
-      #   run: yarn lint
-      # - name: Run tests
-      #   run: yarn test
