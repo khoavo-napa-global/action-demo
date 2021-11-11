@@ -3,7 +3,7 @@
   "scripts": {
     "test": "npx hardhat test",
     "compile": "npx hardhat compile",
-    "lint": "npx solhint --max-warnings 0 contracts/**/*.sol"
+    "lint": "npx solhint -q true contracts/**/*.sol"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
