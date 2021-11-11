@@ -20,4 +20,4 @@ jobs:
       # - name: Run Compile
       #   run: npx hardhat compile
       - name: Run solhint check
-        run: npx solhint --max-warnings 0 contracts/**/*.sol
+        run: npx solhint --formatter table --quite true 'contracts/**/*.sol'
