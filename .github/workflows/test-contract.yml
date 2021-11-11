@@ -15,8 +15,8 @@ jobs:
         uses: actions/setup-node@v2
       - name: Cancel current workflow run
         uses: actions/github-script@v4
-        with:
-          node-version: 12.x
+        # with:
+        #   node-version: 12.x
           # script: |
           #     github.actions.cancelWorkflowRun({
           #         owner: context.repo.owner,
