@@ -11,20 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node 12
+      - name: Setup node 14
         uses: actions/setup-node@v2
         with:
-          node-version: 12.x
-      # - name: Cancel current workflow run
-      #   uses: actions/github-script@v4
-      #   with:
-      #     node-version: 12.x
-      #     script: |
-      #         github.actions.cancelWorkflowRun({
-      #             owner: context.repo.owner,
-      #             repo: context.repo.repo,
-      #             run_id: context.runId
-      #         })
+          node-version: 14.x
+      - name: Cancel current workflow run
+        uses: actions/github-script@v4
+        with:
+          node-version: 14.x
+          script: |
+              github.actions.cancelWorkflowRun({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  run_id: context.runId
+              })
       - name: Install Package
         run: yarn
       # - name: Run Compile
