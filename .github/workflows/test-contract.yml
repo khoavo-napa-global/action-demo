@@ -19,5 +19,7 @@ jobs:
         run: yarn
       # - name: Run Compile
       #   run: npx hardhat compile
+      - name: Run solhint check
+        run: yarn lint
       - name: Run tests
         run: yarn test
