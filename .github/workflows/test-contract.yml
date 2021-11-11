@@ -15,6 +15,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
+     
+      - name: Install Package
+        run: yarn
+      # - name: Run Compile
+      #   run: npx hardhat compile
+      - name: Run solhint check
+        run: yarn lint
+      if: ${{ failure() }}  
       - name: Cancel current workflow run
         uses: actions/github-script@v4
         with:
@@ -24,13 +32,7 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   run_id: context.runId
-              })
-      - name: Install Package
-        run: yarn
-      # - name: Run Compile
-      #   run: npx hardhat compile
-      - name: Run solhint check
-        run: yarn lint
+              })   
       # - name: Run tests
         # run: yarn test
   
