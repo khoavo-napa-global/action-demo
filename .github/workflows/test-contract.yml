@@ -26,12 +26,14 @@ jobs:
                   repo: context.repo.repo,
                   run_id: context.runId
               })
-      - name: Install Package
-        run: yarn
+      # - name: Install Package
+      #   run: yarn
       # - name: Run Compile
       #   run: npx hardhat compile
       - name: Run solhint check
         run: yarn lint
+        with:
+          fail-on-error: true
       # - name: Run tests
         # run: yarn test
   # Contract-GitHub-Actions-2:
