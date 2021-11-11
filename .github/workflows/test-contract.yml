@@ -29,8 +29,8 @@ jobs:
   Contract-GitHub-Actions-2:
     runs-on: ubuntu-latest
     if: ${{ failure() }}
-        needs:
-            - Contract-GitHub-Actions
+      needs:
+        - Contract-GitHub-Actions
     continue-on-error: false
     steps:
       - uses: actions/checkout@v2
